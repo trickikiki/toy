@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>轮播</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		.ig{
+			position: absolute;
+		}
+		.btn{
+			position: absolute;
+			height: 90px;
+			width: 60px;
+			background:rgba(0,0,0,0.5);
+			color: #fff;
+			text-align: center;
+			line-height: 90px;
+			font-size: 40px;
+			top: 255px;
+			cursor: pointer;
+		}
+		.tabs{
+			position: absolute;
+		}
+		ul{
+			list-style-type: none;
+		}
+		#tabs{
+			position: absolute;
+			top: 550px;
+			left: 300px;
+
+		}
+		.tab{
+			width: 30px;
+			height: 30px;
+			background-color: #5388e8;
+			float: left;
+			text-align: center;
+			line-height: 30px;
+			color: #fff;
+			margin-right: 10px;
+			border-radius: 100%;
+			cursor: pointer;
+		}
+		.bg{
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		var i=0;
+		var timer;
+		$(function(){
+			$(".ig").eq(0).show().siblings().hide();
+			ShowTime();
+			$(".tab").hover(function(){
+				i=$(this).index();
+				Show();
+				clearInterval(timer);//停掉
+			},function(){
+				ShowTime();
+			});
+			$(".btn1").click(function(){
+				clearInterval(timer);
+				if (i===0) 
+				{
+					i=3;
+				}
+				i--;
+				Show();
+				ShowTime();
+			});
+			$(".btn2").click(function(){
+				clearInterval(timer);
+				if (i===2) 
+				{
+					i=-1;
+				}
+				i++;
+				Show();
+				ShowTime();
+			})
+		})
+		function Show()//显示图片
+		{
+			$(".ig").eq(i).fadeIn(500).siblings().fadeOut(500);
+			$(".tab").eq(i).addClass("bg").siblings().removeClass("bg");
+		}
+		function ShowTime()//时钟周期
+		{
+			timer=setInterval(function(){
+				i++;
+				if (i===4)
+				{
+					i=0;
+				}
+				Show();
+			},3000);
+		}
+	</script>
+</head>
+<body>
+	<div id="igs">
+		<div class="ig"><img src="1.jpg"></div>
+		<div class="ig"><img src="2.jpg"></div>
+		<div class="ig"><img src="3.jpg"></div>
+	</div>
+	<div class="btn btn1"><</div>
+	<div class="btn btn2" style="left: 740px;">></div>
+	<div id="tabs">
+		<div class="tab bg">1</div>
+		<div class="tab">2</div>
+		<div class="tab">3</div>
+	</div>
+</body>
+</html>

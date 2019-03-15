@@ -1,0 +1,59 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+.pic{
+	width: 800px;
+	height: 600px;
+}
+.pic ul li{
+	float: left;
+	height: 600px;
+	width: 0px;
+}
+.pic ul #pic1{
+	background-image: url("1.jpg");
+	width: 800px;
+}
+#pic2{
+	background-image: url("2.jpg");
+}
+#pic3{
+	background-image: url("3.jpg");
+}
+.btn{
+	position: absolute;
+	height: 90px;
+	width: 60px;
+	background:rgba(0,0,0,0.5);
+	color: #fff;
+	text-align: center;
+	line-height: 90px;
+	font-size: 40px;
+	top: 255px;
+	cursor: pointer;
+}
+.tabs{
+	position: absolute;
+}
+#tabs{
+	position: absolute;
+	top: 550px;
+	left: 300px;
+}
+.tab{
+	width: 30px;
+	height: 30px;
+	background-color: #5388e8;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	margin-right: 10px;
+	border-radius: 100%;
+	cursor: pointer;
+}
+.bg{
+	background-color: red;
+}

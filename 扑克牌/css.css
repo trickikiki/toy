@@ -1,0 +1,62 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.over{
+	height: 150px;
+	width: 200px;
+	position: absolute;
+	left: 400px;
+	top: 500px;
+}
+.start{
+	height: 150px;
+	width: 200px;
+	position: absolute;
+	left: 200px;
+	top: 500px;
+}
+body{
+	background-color: white;
+}
+.pic{
+	position: absolute;
+}
+.pic1{
+	top: 50px;
+	left: 50px;
+	z-index: 1;
+}
+.pic2{
+	top: 50px;
+	left: 700px;
+	z-index: 1;
+}
+.pic3{
+	top: 50px;
+	left: 375px;
+	z-index: 2;
+}
+.pic4{
+	top: 100px;
+	left: 530px;
+	z-index: 2;
+}
+.pic5{
+	top: 152px;
+	left: 370px;
+	z-index: 3;
+}
+.pic img{
+	padding: 10px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px #FFC;
+	cursor: pointer;
+	width: 250px;
+}
+.pic div{
+	font-size: 30px;
+	text-align: center;
+	display: block;
+}

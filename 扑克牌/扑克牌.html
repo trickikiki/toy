@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>扑克牌</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="js.js"></script>
+	<script type="text/javascript">
+		function start(){
+			var i=parseInt( 2*Math.random() );
+			if(i==0){
+				$('#num1').css("display","none")
+				$('#num2').css("display","none")
+				$('#num3').css("display","none")
+				setTimeout(function(){
+					$('.pic1').click();
+				},500)
+				setTimeout(function(){
+					$('.pic2').click();
+				},1000)
+				setTimeout(function(){
+					$('.pic1').click();
+				},1500)
+				setTimeout(function(){
+					$('.pic3').click();
+				},2000)
+				setTimeout(function(){
+					$('.pic2').click();
+				},2500)
+				setTimeout(function(){
+					$('.pic3').click();
+				},3000)
+				setTimeout(function(){
+					$('.pic1').click();
+				},3500)
+			}
+			if(i==1){
+				$('#num1').css("display","none")
+				$('#num2').css("display","none")
+				$('#num3').css("display","none")
+				setTimeout(function(){
+					$('.pic2').click();
+				},500)
+				setTimeout(function(){
+					$('.pic1').click();
+				},1000)
+				setTimeout(function(){
+					$('.pic3').click();
+				},1500)
+				setTimeout(function(){
+					$('.pic2').click();
+				},2000)
+				setTimeout(function(){
+					$('.pic1').click();
+				},2500)
+				setTimeout(function(){
+					$('.pic3').click();
+				},3000)
+				setTimeout(function(){
+					$('.pic1').click();
+				},3500)
+			}
+		}
+		function over(){
+			$('#num1').css("display","")
+			$('#num2').css("display","")
+			$('#num3').css("display","")
+		}
+	</script>
+</head>
+<body>
+	<div class="pic pic1" id="left"><img src="1.jpg"><div id="num1">1</div></div>
+	<div class="pic pic2" id="right"><img src="1.jpg"><div id="num2">2</div></div>
+	<div class="pic pic3" title=""><img src="1.jpg"><div id="num3">3</div></div>
+	<button onclick="start()" class="start">开始游戏</button>
+	<button onclick="over()" class="over">展示数字</button>
+<!-- 	<div class="pic pic4"><img src="4.jpg"></div>
+	<div class="pic pic5" title=""><img src="5.jpg"></div> -->
+</body>
+</html>
